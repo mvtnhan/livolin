@@ -1,20 +1,52 @@
 import React from "react";
 import styled from "styled-components";
 import ImgLogo from "../../images/logo.jpg";
+import { ReactComponent as SVGTwitter } from "../../images/icons/twitter.svg";
+import { ReactComponent as SVGFacebook } from "../../images/icons/facebook.svg";
+import { ReactComponent as SVGInstagram } from "../../images/icons/instagram.svg";
+import { ReactComponent as SVGLinkedin } from "../../images/icons/linkedin.svg";
+import { ReactComponent as SVGLocation } from "../../images/icons/location.svg";
+import { ReactComponent as SVGPhone } from "../../images/icons/phone.svg";
+import { ReactComponent as SVGMail } from "../../images/icons/mail.svg";
 
 export default function Footer() {
   return (
     <StyleFooter>
       <div className="Social">
         <img src={ImgLogo} alt="imglogo" />
-        <div className="IconContact"></div>
+
+        <ul className="IconContact">
+          <li>
+            <SVGTwitter />
+          </li>
+          <li>
+            <SVGFacebook />
+          </li>
+          <li>
+            <SVGInstagram />
+          </li>
+          <li>
+            <SVGLinkedin />
+          </li>
+        </ul>
       </div>
       <div className="Contact">
         <h3>VPĐD MEGA LIFESCIENCES PUBLIC COMPANY LIMITED TẠI TP.HCM</h3>
         <ul>
-          <li>Tầng 5 Toà nhà Etown 1, 364 Cộng Hoà, Quận Tân Bình, TP.HCM</li>
-          <li>84-28-38 123 166</li>
-          <li>Megavietnam@megawecare.com</li>
+          <li>
+            <SVGLocation />
+            <span>
+              Tầng 5 Toà nhà Etown 1, 364 Cộng Hoà, Quận Tân Bình, TP.HCM
+            </span>
+          </li>
+          <li>
+            <SVGPhone />
+            <span>84-28-38 123 166</span>
+          </li>
+          <li>
+            <SVGMail />
+            <span>Megavietnam@megawecare.com</span>
+          </li>
         </ul>
       </div>
       <div className="Info">
@@ -42,4 +74,81 @@ export default function Footer() {
   );
 }
 
-const StyleFooter = styled.div``;
+const StyleFooter = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  background-color: ${({ theme }) => theme.color.Gray};
+  padding: 64px 136px;
+  justify-content: space-between;
+
+  div > h3,
+  span,
+  p {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  div > h3 {
+    font-weight: ${({ theme }) => theme.fontStyle.Bold};
+  }
+
+  div > span {
+    font-weight: ${({ theme }) => theme.fontStyle.Bold};
+  }
+
+  .Social {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 136px;
+      height: 56px;
+    }
+
+    .IconContact {
+      margin-top: 32px;
+      display: flex;
+
+      li {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .Contact {
+    ul {
+      margin-top: 12px;
+    }
+
+    li {
+      margin-bottom: 12px;
+      display: flex;
+
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .Info {
+    ul {
+      margin-top: 12px;
+
+      li {
+        margin-bottom: 8px;
+      }
+    }
+
+    .Ads {
+      margin-bottom: 32px;
+    }
+  }
+
+  p {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #e0e0e0;
+    height: 20px;
+    width: 100%;
+  }
+`;
