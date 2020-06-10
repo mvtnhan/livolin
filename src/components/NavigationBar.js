@@ -38,7 +38,7 @@ const StyleNavigationBar = styled.div`
   background-color: white;
 
   img {
-    width: 156px;
+    width: 136px;
   }
 
   .MenuList {
