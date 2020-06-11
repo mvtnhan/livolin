@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// import { ReactComponent as SVGCalender } from "../../images/icons/calender.svg";
 import { ReactComponent as SVGChat } from "../../images/icons/chat.svg";
 import ImgBgHeader from "../../images/bg-header.jpg";
 import ImgLivolin from "../../images/livolin.png";
@@ -10,7 +9,7 @@ import ImgCalender from "../../images/icons/calender.png";
 
 export default function Header() {
   return (
-    <StyleHeader>
+    <StyledHeader>
       <div className="HeadInfo">
         <h1>
           Chương trình tư vấn sức <br /> khoẻ các bệnh lý về gan
@@ -18,7 +17,6 @@ export default function Header() {
         <div className="FindMore">
           <ul>
             <li>
-              {/* <SVGCalender /> */}
               <img src={ImgCalender} alt="imgcalender" />
               <span>June 27- July 8,2018</span>
             </li>
@@ -32,11 +30,11 @@ export default function Header() {
       </div>
       <img className="ImgLivolin" src={ImgLivolin} alt="imglivolin" />
       <img className="ImgSlide" src={ImgSlide} alt="imgslide" />
-    </StyleHeader>
+    </StyledHeader>
   );
 }
 
-const StyleHeader = styled.div`
+const StyledHeader = styled.div`
   margin-top: 72px;
   width: 100%;
   height: 640px;

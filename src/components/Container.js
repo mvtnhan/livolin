@@ -1,13 +1,14 @@
-import styled from "styled-components";
 import React from "react";
+import styled from "styled-components";
 
 export default function Container(props) {
   return (
-    <StyleContainer className="Container">{props.children}</StyleContainer>
+    <StyledContainer className="Container">{props.children}</StyledContainer>
   );
 }
 
-const StyleContainer = styled.div`
-  max-width: 1168px;
-  margin: 64px 24px;
+const StyledContainer = styled.div`
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 64px 16px;
 `;

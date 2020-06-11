@@ -14,7 +14,7 @@ import ImgLogo from "../../images/logo.jpg";
 
 export default function Footer() {
   return (
-    <StyleFooter>
+    <StyledFooter>
       <Container>
         <div className="Social">
           <div className="ImgLogo">
@@ -77,14 +77,12 @@ export default function Footer() {
           Disclosure
         </p>
       </Container>
-    </StyleFooter>
+    </StyledFooter>
   );
 }
 
-const StyleFooter = styled.div`
+const StyledFooter = styled.div`
   background-color: ${({ theme }) => theme.color.Gray};
-  justify-content: center;
-  display: flex;
 
   .Container {
     justify-content: space-between;

@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import imglogo from "../images/logo.jpg";
+
 import { ReactComponent as SVGSearch } from "../images/icons/search.svg";
+import imglogo from "../images/logo.jpg";
 
 export default function NavigationBar() {
   return (
-    <StyleNavigationBar>
+    <StyledNavigationBar>
       <img src={imglogo} alt="imglogo" />
       <div className="MenuList">
         <ul>
@@ -22,11 +23,11 @@ export default function NavigationBar() {
         <SVGSearch />
         <input type="text" placeholder="Tìm kiếm"></input>
       </div>
-    </StyleNavigationBar>
+    </StyledNavigationBar>
   );
 }
 
-const StyleNavigationBar = styled.div`
+const StyledNavigationBar = styled.div`
   display: flex;
   align-items: center;
   position: fixed;

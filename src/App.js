@@ -1,20 +1,19 @@
 import React from "react";
-import styled from "styled-components";
 
-import NavigationBar from "./components/NavigationBar.js";
+import Body from "./pages/Home/Body.js";
 import Footer from "./pages/Home/Footer.js";
 import Header from "./pages/Home/Header.js";
+import NavigationBar from "./components/NavigationBar.js";
 
 function App() {
   return (
-    <StyleApp>
+    <div>
       <NavigationBar />
       <Header />
+      <Body />
       <Footer />
-    </StyleApp>
+    </div>
   );
 }
 
 export default App;
-
-const StyleApp = styled.div``;
