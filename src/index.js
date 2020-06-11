@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import React from "react";
 import ReactDOM from "react-dom";
 import reset from "styled-reset";
@@ -15,10 +15,25 @@ ${reset}
   }
 `;
 
+const theme = {
+  fontStyle: {
+    Regular: 400,
+    Medium: 500,
+    SemiBold: 600,
+    Bold: 700,
+  },
+  color: {
+    Orange: "#EA650F",
+    Gray: "#EFEFEF",
+  },
+};
+
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
