@@ -132,7 +132,24 @@ const StyledBody = styled.div`
   .Ask {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 96px;
+
+    @media (max-width: 1130px) {
+      margin-bottom: 0;
+
+      > p {
+        display: none;
+      }
+
+      > div {
+        margin-bottom: 0;
+
+        > div {
+          margin-bottom: 32px;
+        }
+      }
+    }
 
     .AskExpert,
     .CustomerReview {
@@ -142,6 +159,12 @@ const StyledBody = styled.div`
         img {
           width: 100%;
           height: 276px;
+        }
+
+        @media (max-width: 1130px) {
+          img {
+            height: 160px;
+          }
         }
       }
     }
@@ -184,7 +207,67 @@ const StyledBody = styled.div`
         }
       }
     }
+
+    @media (max-width: 1130px) {
+      .AskExpert,
+      .CustomerReview {
+        .ArticleBox {
+          width: 222px;
+
+          img {
+            height: 180px;
+          }
+        }
+      }
+
+      .News {
+        .ArticleBox {
+          width: 268px;
+          height: 122px;
+
+          img {
+            width: 110px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 860px) {
+      .AskExpert,
+      .CustomerReview {
+        .ArticleBox {
+          width: 100%;
+
+          img {
+            height: 360px;
+          }
+        }
+      }
+
+      .News {
+        .ArticleBox {
+          width: 100%;
+          height: 124px;
+
+          img {
+            width: 40%;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 680px) {
+      .AskExpert,
+      .CustomerReview {
+        .ArticleBox {
+          img {
+            height: 260px;
+          }
+        }
+      }
+    }
   }
+
   .HealthBox,
   .ShareFromExpert {
     margin-bottom: 96px;
@@ -199,6 +282,14 @@ const StyledBody = styled.div`
           width: 100%;
           height: 151px;
         }
+      }
+    }
+
+    @media (max-width: 1130px) {
+      margin-bottom: 0px;
+
+      > div > div {
+        margin-bottom: 32px;
       }
     }
   }

@@ -43,7 +43,6 @@ const StyledNavigationBar = styled.div`
   }
 
   .MenuList {
-    font-weight: ${({ theme }) => theme.fontStyle.Medium};
     display: flex;
     flex-grow: 1;
     justify-content: center;
@@ -53,6 +52,7 @@ const StyledNavigationBar = styled.div`
 
       li {
         margin: 0 12px;
+        font-weight: ${({ theme }) => theme.fontStyle.Medium};
       }
     }
   }

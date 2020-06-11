@@ -47,6 +47,10 @@ const StyledHeader = styled.div`
   align-items: center;
   position: relative;
 
+  @media (max-width: 680px) {
+    height: 480px;
+  }
+
   .FindMore,
   .ImgSlide,
   ul,
@@ -60,6 +64,10 @@ const StyledHeader = styled.div`
     h1 {
       font-size: 56px;
       font-weight: ${({ theme }) => theme.fontStyle.SemiBold};
+
+      @media (max-width: 680px) {
+        font-size: 32px;
+      }
     }
 
     .FindMore {
@@ -143,6 +151,10 @@ const StyledHeader = styled.div`
   .ImgLivolin {
     top: 460px;
     right: 184px;
+
+    @media (max-width: 680px) {
+      display: none;
+    }
   }
 
   .ImgSlide {
