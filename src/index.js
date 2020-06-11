@@ -1,17 +1,20 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { normalize } from "styled-normalize";
 import React from "react";
 import ReactDOM from "react-dom";
-import reset from "styled-reset";
 
 import * as serviceWorker from "./serviceWorker";
 import App from "./App";
 
 const GlobalStyle = createGlobalStyle`
-${reset}
-  body {
+${normalize}
+  body, img, div, h3, h2, h1, p, ul {
+    margin: 0;
     font-family: 'Barlow', Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 16px;
+    padding: 0;
+    list-style: none;
   }
 `;
 

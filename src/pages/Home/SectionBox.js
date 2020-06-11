@@ -32,6 +32,7 @@ const StyledSectionBox = styled.div`
 
   > div {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: ${(props) => (props.vertical ? "column" : "row")};
 
     h3 {
