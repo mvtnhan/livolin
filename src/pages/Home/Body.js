@@ -135,22 +135,6 @@ const StyledBody = styled.div`
     flex-wrap: wrap;
     margin-bottom: 96px;
 
-    @media (max-width: 1130px) {
-      margin-bottom: 0;
-
-      > p {
-        display: none;
-      }
-
-      > div {
-        margin-bottom: 0;
-
-        > div {
-          margin-bottom: 32px;
-        }
-      }
-    }
-
     .AskExpert,
     .CustomerReview {
       .ArticleBox {
@@ -159,12 +143,6 @@ const StyledBody = styled.div`
         img {
           width: 100%;
           height: 276px;
-        }
-
-        @media (max-width: 1130px) {
-          img {
-            height: 160px;
-          }
         }
       }
     }
@@ -207,65 +185,6 @@ const StyledBody = styled.div`
         }
       }
     }
-
-    @media (max-width: 1130px) {
-      .AskExpert,
-      .CustomerReview {
-        .ArticleBox {
-          width: 222px;
-
-          img {
-            height: 180px;
-          }
-        }
-      }
-
-      .News {
-        .ArticleBox {
-          width: 268px;
-          height: 122px;
-
-          img {
-            width: 110px;
-          }
-        }
-      }
-    }
-
-    @media (max-width: 860px) {
-      .AskExpert,
-      .CustomerReview {
-        .ArticleBox {
-          width: 100%;
-
-          img {
-            height: 360px;
-          }
-        }
-      }
-
-      .News {
-        .ArticleBox {
-          width: 100%;
-          height: 124px;
-
-          img {
-            width: 40%;
-          }
-        }
-      }
-    }
-
-    @media (max-width: 680px) {
-      .AskExpert,
-      .CustomerReview {
-        .ArticleBox {
-          img {
-            height: 260px;
-          }
-        }
-      }
-    }
   }
 
   .HealthBox,
@@ -284,12 +203,72 @@ const StyledBody = styled.div`
         }
       }
     }
+  }
 
-    @media (max-width: 1130px) {
-      margin-bottom: 0px;
+  @media (max-width: 1160px) {
+    .Ask > .AskExpert,
+    .Ask > .CustomerReview,
+    .Health > .HealthBox > div > .ArticleBox,
+    .ShareFromExpert > div > .ArticleBox,
+    .Ask > .News > div > .ArticleBox > img {
+      width: 45% !important;
+    }
 
-      > div > div {
-        margin-bottom: 32px;
+    .Ask > .AskExpert > div > .ArticleBox,
+    .Ask > .CustomerReview > div > .ArticleBox,
+    .Ask > .News,
+    .Ask > .News > div > .ArticleBox {
+      width: 100%;
+    }
+
+    .Ask {
+      margin-bottom: 32px;
+      > div {
+        margin-bottom: 16px;
+      }
+    }
+
+    .Ask > p {
+      display: none;
+    }
+
+    .Ask > .News > div > .ArticleBox {
+      height: 242px;
+    }
+
+    .HealthBox,
+    .ShareFromExpert {
+      margin-bottom: 32px;
+      padding: 0 8px;
+
+      .ArticleBox {
+        padding-bottom: 32px;
+
+        img {
+          height: 230px !important;
+        }
+
+        .PlayVideo {
+          top: 35%;
+          right: 45%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 620px) {
+    .Ask > .CustomerReview,
+    .Ask > .AskExpert,
+    .Health > .HealthBox > div > .ArticleBox,
+    .ShareFromExpert > div > .ArticleBox {
+      width: 100% !important;
+
+      img {
+        height: 240px !important;
+      }
+
+      .PlayVideo {
+        right: 48%;
       }
     }
   }

@@ -12,17 +12,11 @@ const StyledContainer = styled.div`
   margin: 0 auto;
   padding: 64px 16px;
 
-  @media (max-width: 1130px) {
-    width: 760px;
+  @media (max-width: 1160px) {
+    padding: 32px 64px;
   }
 
-  @media (max-width: 860px) {
-    width: 680px;
-    padding: 64px 16px;
-  }
-
-  @media (max-width: 680px) {
-    width: auto;
-    padding: 64px 32px;
+  @media (max-width: 620px) {
+    padding: 32px 16px;
   }
 `;

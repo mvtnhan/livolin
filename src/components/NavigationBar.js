@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { ReactComponent as SVGSearch } from "../images/icons/search.svg";
 import imglogo from "../images/logo.jpg";
+import imgmenu from "../images/icons/menu.png";
 
 export default function NavigationBar() {
   return (
@@ -18,6 +19,7 @@ export default function NavigationBar() {
           <li>Điểm bán</li>
           <li>Về chúng tôi</li>
         </ul>
+        <img className="IconMenu" src={imgmenu} alt="img-menu" />
       </div>
       <div className="SearchBar">
         <SVGSearch />
@@ -49,11 +51,20 @@ const StyledNavigationBar = styled.div`
 
     ul {
       display: flex;
+      align-items: center;
 
       li {
         margin: 0 12px;
         font-weight: ${({ theme }) => theme.fontStyle.Medium};
       }
+    }
+    .IconMenu {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 48px;
+      display: none;
+      color: transparent;
     }
   }
 
@@ -67,6 +78,30 @@ const StyledNavigationBar = styled.div`
     input {
       border: none;
       margin-left: 8px;
+    }
+  }
+
+  @media (max-width: 1130px) {
+    height: 64px;
+
+    .SearchBar {
+      display: none;
+    }
+  }
+
+  @media (max-width: 900px) {
+    height: 48px;
+
+    .SearchBar {
+      display: none;
+    }
+
+    ul {
+      display: none !important;
+    }
+
+    .IconMenu {
+      display: block !important;
     }
   }
 `;
