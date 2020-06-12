@@ -32,16 +32,6 @@ export default class NavigationBar extends React.Component {
             ))}
           </ul>
 
-          {/* <ul>
-            <li>Về Livolin</li>
-            <li>Cẩm nang gan</li>
-            <li>Câu hỏi thường gặp</li>
-            <li>Trải nghiệm</li>
-            <li>Tin tức</li>
-            <li>Điểm bán</li>
-            <li>Về chúng tôi</li>
-          </ul> */}
-
           {showMenu ? (
             <ul className="ShowMenu">
               {menu.map((icons) => (
