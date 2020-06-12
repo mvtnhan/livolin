@@ -92,7 +92,7 @@ const StyledNavigationBar = styled.div`
 
     .IconMenu {
       position: absolute;
-      right: 0;
+      right: 8px;
       top: 8px;
       width: 32px;
       display: none;
