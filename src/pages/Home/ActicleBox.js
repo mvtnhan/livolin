@@ -44,6 +44,7 @@ const StyledArticleBox = styled.div`
   }
 
   .PlayVideo {
+    cursor: pointer;
     position: absolute;
     top: 28%;
     right: 44%;

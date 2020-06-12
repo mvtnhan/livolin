@@ -5,28 +5,71 @@ import { ReactComponent as SVGSearch } from "../images/icons/search.svg";
 import imglogo from "../images/logo.jpg";
 import imgmenu from "../images/icons/menu.png";
 
-export default function NavigationBar() {
-  return (
-    <StyledNavigationBar>
-      <img src={imglogo} alt="imglogo" />
-      <div className="MenuList">
-        <ul>
-          <li>Về Livolin</li>
-          <li>Cẩm nang gan</li>
-          <li>Câu hỏi thường gặp</li>
-          <li>Trải nghiệm</li>
-          <li>Tin tức</li>
-          <li>Điểm bán</li>
-          <li>Về chúng tôi</li>
-        </ul>
-        <img className="IconMenu" src={imgmenu} alt="img-menu" />
-      </div>
-      <div className="SearchBar">
-        <SVGSearch />
-        <input type="text" placeholder="Tìm kiếm"></input>
-      </div>
-    </StyledNavigationBar>
-  );
+export default class NavigationBar extends React.Component {
+  state = {
+    showMenu: false,
+    menu: [
+      "Về Livolin",
+      "Cẩm nang gan",
+      "Câu hỏi thường gặp",
+      "Trải nghiệm",
+      "Tin tức",
+      "Điểm bán",
+      "Về chúng tôi",
+    ],
+  };
+
+  render() {
+    const { menu, showMenu } = this.state;
+    console.log("showMenu", showMenu);
+    return (
+      <StyledNavigationBar>
+        <img src={imglogo} alt="imglogo" />
+        <div className="MenuList">
+          <ul className="Menu">
+            {menu.map((icons) => (
+              <li key={menu.indexOf(icons)}>{icons}</li>
+            ))}
+          </ul>
+
+          {/* <ul>
+            <li>Về Livolin</li>
+            <li>Cẩm nang gan</li>
+            <li>Câu hỏi thường gặp</li>
+            <li>Trải nghiệm</li>
+            <li>Tin tức</li>
+            <li>Điểm bán</li>
+            <li>Về chúng tôi</li>
+          </ul> */}
+
+          {showMenu ? (
+            <ul className="ShowMenu">
+              {menu.map((icons) => (
+                <li key={menu.indexOf(icons)}>{icons}</li>
+              ))}
+            </ul>
+          ) : null}
+
+          <img
+            className="IconMenu"
+            src={imgmenu}
+            alt="img-menu"
+            onClick={() => {
+              this.setState({
+                showMenu: !showMenu,
+              });
+
+              console.log("ShowMenu", showMenu);
+            }}
+          />
+        </div>
+        <div className="SearchBar">
+          <SVGSearch />
+          <input type="text" placeholder="Tìm kiếm"></input>
+        </div>
+      </StyledNavigationBar>
+    );
+  }
 }
 
 const StyledNavigationBar = styled.div`
@@ -42,6 +85,7 @@ const StyledNavigationBar = styled.div`
 
   img {
     width: 136px;
+    cursor: pointer;
   }
 
   .MenuList {
@@ -58,6 +102,7 @@ const StyledNavigationBar = styled.div`
         font-weight: ${({ theme }) => theme.fontStyle.Medium};
       }
     }
+
     .IconMenu {
       position: absolute;
       right: 0;
@@ -90,17 +135,39 @@ const StyledNavigationBar = styled.div`
   }
 
   @media (max-width: 900px) {
-    height: 48px;
+    height: auto;
+    overflow: unset;
+
+    img {
+      width: 48px;
+    }
 
     .SearchBar {
       display: none;
     }
 
-    ul {
-      display: none !important;
+    .MenuList .Menu {
+      display: none;
     }
 
-    .IconMenu {
+    .MenuList .ShowMenu {
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      background-color: white;
+      flex-direction: column;
+      align-items: flex-start;
+
+      li {
+        margin: 4px 0;
+        font-size: 24px;
+        font-weight: ${({ theme }) => theme.fontStyle.Bold};
+      }
+    }
+
+    .MenuList .IconMenu {
       display: block !important;
     }
   }

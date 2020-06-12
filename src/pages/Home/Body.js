@@ -248,7 +248,7 @@ const StyledBody = styled.div`
         }
 
         .PlayVideo {
-          top: 35%;
+          top: 32%;
           right: 45%;
         }
       }

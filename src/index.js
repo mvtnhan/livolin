@@ -16,6 +16,10 @@ ${normalize}
     padding: 0;
     list-style: none;
   }
+
+  li, button{
+    cursor: pointer;
+  }
 `;
 
 const theme = {
