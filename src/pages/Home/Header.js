@@ -47,6 +47,14 @@ const StyledHeader = styled.div`
   align-items: center;
   position: relative;
 
+  @media (max-width: 1130px) {
+    margin-top: 62px;
+  }
+
+  @media (max-width: 900px) {
+    margin-top: 48px;
+  }
+
   @media (max-width: 680px) {
     height: 480px;
   }
@@ -136,7 +144,7 @@ const StyledHeader = styled.div`
         background-color: ${({ theme }) => theme.color.Orange};
         border: none;
         border-radius: 2px;
-        font-weight: ${({ theme }) => theme.fontStyle.Medium};
+        font-weight: ${({ theme }) => theme.fontStyle.SemiBold};
         color: #ffffff;
         width: 168px;
       }

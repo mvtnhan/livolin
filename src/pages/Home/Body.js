@@ -222,14 +222,14 @@ const StyledBody = styled.div`
     }
 
     .Ask {
-      margin-bottom: 32px;
-      > div {
-        margin-bottom: 16px;
+      margin-bottom: 0px;
+      > p {
+        display: none;
       }
-    }
 
-    .Ask > p {
-      display: none;
+      > div {
+        margin-bottom: 48px;
+      }
     }
 
     .Ask > .News > div > .ArticleBox {
@@ -238,8 +238,7 @@ const StyledBody = styled.div`
 
     .HealthBox,
     .ShareFromExpert {
-      margin-bottom: 32px;
-      padding: 0 8px;
+      margin-bottom: 16px;
 
       .ArticleBox {
         padding-bottom: 32px;
