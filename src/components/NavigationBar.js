@@ -93,8 +93,8 @@ const StyledNavigationBar = styled.div`
     .IconMenu {
       position: absolute;
       right: 0;
-      top: 0;
-      width: 48px;
+      top: 8px;
+      width: 32px;
       display: none;
       color: transparent;
     }
@@ -146,10 +146,12 @@ const StyledNavigationBar = styled.div`
       background-color: white;
       flex-direction: column;
       align-items: flex-start;
+      padding: 8px 0;
 
       li {
-        margin: 4px 16px;
-        font-size: 24px;
+        padding: 16px;
+        width: 100%;
+        border-top: 1px solid #ebebeb;
         font-weight: ${({ theme }) => theme.fontStyle.Medium};
       }
     }
