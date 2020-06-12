@@ -209,9 +209,16 @@ const StyledBody = styled.div`
     .Ask > .AskExpert,
     .Ask > .CustomerReview,
     .Health > .HealthBox > div > .ArticleBox,
-    .ShareFromExpert > div > .ArticleBox,
-    .Ask > .News > div > .ArticleBox > img {
+    .ShareFromExpert > div > .ArticleBox {
       width: 45% !important;
+    }
+
+    .Ask > .News > div > .ArticleBox > img {
+      width: 60%;
+    }
+
+    .Ask .News > div > .ArticleBox h3 {
+      width: 40%;
     }
 
     .Ask > .AskExpert > div > .ArticleBox,

@@ -21,7 +21,6 @@ export default class NavigationBar extends React.Component {
 
   render() {
     const { menu, showMenu } = this.state;
-    console.log("showMenu", showMenu);
     return (
       <StyledNavigationBar>
         <img src={imglogo} alt="imglogo" />
@@ -48,8 +47,6 @@ export default class NavigationBar extends React.Component {
               this.setState({
                 showMenu: !showMenu,
               });
-
-              console.log("ShowMenu", showMenu);
             }}
           />
         </div>
@@ -151,9 +148,9 @@ const StyledNavigationBar = styled.div`
       align-items: flex-start;
 
       li {
-        margin: 4px 0;
+        margin: 4px 16px;
         font-size: 24px;
-        font-weight: ${({ theme }) => theme.fontStyle.Bold};
+        font-weight: ${({ theme }) => theme.fontStyle.Medium};
       }
     }
 
