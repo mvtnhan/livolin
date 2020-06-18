@@ -8,8 +8,10 @@ import { ReactComponent as SVGPlay } from "../../images/icons/play.svg";
 export default function ArticleBox(props) {
   return (
     <StyledArticleBox horizontal={props.horizontal} className="ArticleBox">
-      <img src={props.image} alt={props.title} />
-      {props.time && <SVGPlay className="PlayVideo" />}
+      <div>
+        <img src={props.image} alt={props.title} />
+        {props.time && <SVGPlay className="PlayVideo" />}
+      </div>
       <h3>{props.title}</h3>
       {props.description && <p>{props.description}</p>}
       {props.time && (
@@ -43,11 +45,16 @@ const StyledArticleBox = styled.div`
     border-radius: 2px;
   }
 
+  > div {
+    position: relative;
+  }
+
   .PlayVideo {
     cursor: pointer;
     position: absolute;
-    top: 28%;
-    right: 44%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   p,

@@ -253,11 +253,6 @@ const StyledBody = styled.div`
         img {
           height: 230px !important;
         }
-
-        .PlayVideo {
-          top: 32%;
-          right: 45%;
-        }
       }
     }
   }
@@ -271,10 +266,6 @@ const StyledBody = styled.div`
 
       img {
         height: 240px !important;
-      }
-
-      .PlayVideo {
-        right: 48%;
       }
     }
   }
